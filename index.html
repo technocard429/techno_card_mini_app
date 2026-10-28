@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <title>TECHNO CARD | تيكنو كارد</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root{--bg:#080808;--panel:#121212;--panel2:#191919;--orange:#ff7900;--text:#f7f7f7;--muted:#aaa;--line:#332012}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at top,#241205 0%,var(--bg) 48%);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;min-height:100vh}
+    .wrap{max-width:760px;margin:auto;padding:18px 14px 34px}
+    header{display:flex;align-items:center;gap:12px;padding:8px 2px 20px}
+    .logo{width:54px;height:54px;border:1px solid var(--orange);border-radius:16px;display:grid;place-items:center;color:var(--orange);font-weight:1000;font-size:20px;box-shadow:0 0 18px #ff790044,inset 0 0 14px #ff790022;background:linear-gradient(145deg,#241306,#080808)}
+    h1{font-size:20px;line-height:1.25;margin:0;letter-spacing:1px}
+    .sub{color:var(--muted);font-size:12px;margin-top:5px}
+    .hero{border:1px solid #63300b;border-radius:22px;padding:22px 18px;background:linear-gradient(130deg,#251204,#12100e 60%,#090909);box-shadow:0 12px 36px #0008;position:relative;overflow:hidden}
+    .hero:after{content:"";position:absolute;width:180px;height:180px;border:1px solid #ff790055;border-radius:50%;left:-70px;top:-75px;box-shadow:0 0 0 16px #ff79000c,0 0 0 34px #ff790008}
+    .eyebrow{color:var(--orange);font-size:11px;font-weight:800;letter-spacing:2px}
+    .hero h2{font-size:26px;margin:10px 0 8px;max-width:450px}
+    .hero p{margin:0;color:#c7c0ba;font-size:13px;line-height:1.8;max-width:470px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+    .chip{border:1px solid #61300e;color:#ffd2ad;background:#ff790012;border-radius:99px;padding:7px 11px;font-size:11px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;margin:24px 2px 12px;gap:10px}
+    .section-head h3{margin:0;font-size:17px}
+    .section-head span{font-size:11px;color:var(--muted)}
+    .search{width:100%;background:#101010;border:1px solid #35302b;color:white;border-radius:13px;padding:13px 14px;font-size:14px;outline:none;margin-bottom:12px}
+    .search:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff790018}
+    .categories{display:flex;gap:8px;overflow:auto;padding-bottom:5px;margin-bottom:12px}
+    .cat{white-space:nowrap;border:1px solid #38302a;border-radius:99px;background:#121212;color:#ddd;padding:9px 13px;font-size:12px}
+    .cat.active{background:var(--orange);border-color:var(--orange);color:#160b03;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+    .product{background:linear-gradient(145deg,#191919,#0f0f0f);border:1px solid #2b2927;border-radius:17px;padding:14px;min-height:156px;display:flex;flex-direction:column}
+    .gameicon{height:43px;width:43px;border-radius:13px;display:grid;place-items:center;background:#ff790016;border:1px solid #6a350f;color:var(--orange);font-size:20px;margin-bottom:12px}
+    .product h4{margin:0 0 5px;font-size:14px}
+    .product p{margin:0;color:var(--muted);font-size:11px;line-height:1.6;flex:1}
+    .product button{margin-top:12px;background:transparent;border:1px solid var(--orange);color:#ff9b45;border-radius:10px;padding:9px;font-weight:750;font-size:12px}
+    .product button:active,.primary:active{transform:scale(.98)}
+    .notice{border:1px dashed #604020;background:#ff79000c;color:#d9b89e;border-radius:14px;padding:12px;font-size:11px;line-height:1.7;margin-top:16px}
+    .bottom{position:sticky;bottom:8px;margin-top:18px;background:#17120eeb;backdrop-filter:blur(12px);border:1px solid #56300f;border-radius:16px;padding:12px;display:flex;align-items:center;gap:12px;box-shadow:0 8px 30px #0009}
+    .bottom div{flex:1}.bottom strong{display:block;font-size:13px}.bottom small{color:var(--muted);font-size:11px}
+    .primary{background:var(--orange);border:0;border-radius:11px;padding:12px 15px;color:#170a00;font-weight:900;font-size:12px}
+    footer{text-align:center;color:#777;font-size:10px;margin-top:20px}
+    @media(min-width:560px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h2{font-size:32px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">TC</div>
+    <div><h1>TECHNO CARD</h1><div class="sub">تيكنو كارد · متجر الألعاب والشحن الرقمي</div></div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">NEXT LEVEL DIGITAL</div>
+    <h2>عالمك الرقمي،<br>بلمسة واحدة.</h2>
+    <p>اكتشف بطاقات الألعاب والخدمات الرقمية من واجهة سريعة مصممة خصيصاً لتجربة تيليجرام.</p>
+    <div class="chips"><span class="chip">⚡ تجربة سريعة</span><span class="chip">🎮 ألعاب وبطاقات</span><span class="chip">🛡️ طلب آمن</span></div>
+  </section>
+
+  <div class="section-head"><h3>تصفّح الخدمات</h3><span>نسخة تجريبية أولية</span></div>
+  <input id="search" class="search" type="search" placeholder="ابحث عن لعبة أو بطاقة..." aria-label="ابحث عن منتج">
+  <div class="categories" id="categories">
+    <button class="cat active" data-cat="all">الكل</button>
+    <button class="cat" data-cat="games">الألعاب</button>
+    <button class="cat" data-cat="cards">البطاقات الرقمية</button>
+    <button class="cat" data-cat="subscriptions">الاشتراكات</button>
+  </div>
+
+  <div class="grid" id="products">
+    <article class="product" data-cat="games" data-name="فري فاير free fire">
+      <div class="gameicon">🔥</div><h4>Free Fire</h4><p>شحن ألعاب · السعر والتوفر قيد الإعداد</p><button data-product="Free Fire">استفسر عن المنتج</button>
+    </article>
+    <article class="product" data-cat="games" data-name="ببجي pubg mobile">
+      <div class="gameicon">🎯</div><h4>PUBG Mobile</h4><p>بطاقات وشحن ألعاب · قريباً</p><button data-product="PUBG Mobile">استفسر عن المنتج</button>
+    </article>
+    <article class="product" data-cat="games" data-name="موبايل ليجندز mobile legends">
+      <div class="gameicon">⚔️</div><h4>Mobile Legends</h4><p>خدمات الألعاب · قريباً</p><button data-product="Mobile Legends">استفسر عن المنتج</button>
+    </article>
+    <article class="product" data-cat="cards" data-name="بطاقات رقمية digital cards">
+      <div class="gameicon">▣</div><h4>بطاقات رقمية</h4><p>أكواد وبطاقات مسبقة الدفع · قريباً</p><button data-product="بطاقات رقمية">استفسر عن المنتج</button>
+    </article>
+    <article class="product" data-cat="subscriptions" data-name="اشتراكات subscriptions">
+      <div class="gameicon">✦</div><h4>الاشتراكات</h4><p>خدمات واشتراكات رقمية · قريباً</p><button data-product="الاشتراكات">استفسر عن المنتج</button>
+    </article>
+    <article class="product" data-cat="cards" data-name="خدمات رقمية digital services">
+      <div class="gameicon">⌘</div><h4>خدمات رقمية</h4><p>خدمات إضافية · قريباً</p><button data-product="خدمات رقمية">استفسر عن المنتج</button>
+    </article>
+  </div>
+
+  <div class="notice">هذه نسخة واجهة أولية فقط. لا توجد حالياً مدفوعات حقيقية أو تنفيذ شحن أو ربط مورد. لا تدخل بيانات دفع أو كلمات مرور. سنضيف الربط بعد إعداد الخدمات والتحقق منها.</div>
+  <div class="bottom"><div><strong>TECHNO CARD</strong><small>ابدأ باستعراض المنتجات</small></div><button class="primary" id="help">تواصل مع البوت</button></div>
+  <footer>© TECHNO CARD · تجربة رقمية مستقبلية</footer>
+</div>
+<script>
+  const tg = window.Telegram && window.Telegram.WebApp;
+  if (tg) { tg.ready(); tg.expand(); }
+  let activeCat = 'all';
+  const cards = [...document.querySelectorAll('.product')];
+  function filterProducts() {
+    const q = document.getElementById('search').value.trim().toLowerCase();
+    cards.forEach(card => {
+      const catOK = activeCat === 'all' || card.dataset.cat === activeCat;
+      const textOK = (card.dataset.name + ' ' + card.innerText).toLowerCase().includes(q);
+      card.style.display = catOK && textOK ? 'flex' : 'none';
+    });
+  }
+  document.querySelectorAll('.cat').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('.cat').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active'); activeCat = btn.dataset.cat; filterProducts();
+  }));
+  document.getElementById('search').addEventListener('input', filterProducts);
+  document.querySelectorAll('[data-product]').forEach(btn => btn.addEventListener('click', () => {
+    const name = btn.dataset.product;
+    const msg = `مرحباً، أريد الاستفسار عن: ${name}`;
+    if (tg && tg.sendData) { tg.sendData(JSON.stringify({action:'product_inquiry', product:name})); }
+    else { alert(msg + '\n\nهذه نسخة تجريبية؛ سنربط الطلبات بالبوت لاحقاً.'); }
+  }));
+  document.getElementById('help').addEventListener('click', () => {
+    if (tg && tg.openTelegramLink) tg.openTelegramLink('https://t.me/');
+    else alert('سنضيف رابط البوت هنا بعد إعداد اسم المستخدم.');
+  });
+</script>
+</body>
+</html>
